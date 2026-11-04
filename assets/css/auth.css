@@ -1,0 +1,97 @@
+/* ===== Halaman login & daftar ===== */
+.auth-shell { min-height: 100vh; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
+
+/* ---- panel merek (kiri) ---- */
+.auth-brand {
+  position: relative; overflow: hidden; color: #e9f4ec;
+  display: flex; flex-direction: column; gap: 28px; padding: 40px clamp(28px, 5vw, 64px);
+  background:
+    radial-gradient(520px 360px at 85% 0%, rgba(201, 242, 107, .22), transparent 65%),
+    radial-gradient(480px 380px at 0% 100%, rgba(61, 220, 151, .16), transparent 65%),
+    linear-gradient(150deg, #134430 0%, #0b241a 55%, #08180f 100%);
+}
+.auth-brand::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: linear-gradient(160deg, transparent 20%, #000 90%);
+}
+.auth-brand > * { position: relative; }
+.brand { display: inline-flex; align-items: center; gap: 11px; color: #fff; text-decoration: none; font: 800 22px var(--font-display); letter-spacing: -.6px; width: max-content; }
+.brand b { color: var(--lime); font-weight: 800; }
+.brand-mark { width: 38px; height: 38px; border-radius: 12px; background: var(--lime); color: #0c2218; display: grid; place-items: center; }
+.brand-mark .i { width: 20px; height: 20px; stroke-width: 2.4; }
+
+.brand-copy h2 { font: 800 clamp(30px, 3.4vw, 46px)/1.05 var(--font-display); letter-spacing: -1.4px; color: #fff; }
+.brand-copy h2 em { font-style: normal; color: var(--lime); }
+.brand-copy p { margin-top: 16px; max-width: 440px; color: #a9c2b3; font-size: 15px; line-height: 1.65; }
+
+/* mock dashboard kecil */
+.mock { position: relative; height: 230px; max-width: 470px; margin: 6px 0; }
+.m-card {
+  position: absolute; background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .14);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-radius: 18px; padding: 16px; box-shadow: 0 20px 50px -20px rgba(0, 0, 0, .5);
+}
+.m-balance { left: 0; top: 0; width: 62%; animation: float 6s ease-in-out infinite; }
+.m-balance small { display: block; color: #9ab8a6; font-size: 11px; font-weight: 600; }
+.m-balance b { display: block; margin: 4px 0 12px; font: 800 24px var(--font-display); color: #fff; letter-spacing: -.8px; }
+.m-bars { display: flex; align-items: flex-end; gap: 6px; height: 46px; }
+.m-bars i { flex: 1; height: var(--h); border-radius: 5px 5px 2px 2px; background: rgba(201, 242, 107, .35); }
+.m-bars i:last-child { background: var(--lime); }
+.m-budget { right: 0; top: 18px; width: 44%; animation: float 7s ease-in-out -2s infinite; }
+.m-row { display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; color: #e9f4ec; margin-bottom: 10px; }
+.m-row span:last-child { color: #ffb86b; }
+.m-prog { height: 7px; border-radius: 9px; background: rgba(255, 255, 255, .14); overflow: hidden; }
+.m-prog i { display: block; height: 100%; width: var(--w); border-radius: 9px; background: #ffb86b; }
+.m-tx { left: 14%; bottom: 0; width: 76%; display: flex; align-items: center; gap: 12px; padding: 13px 15px; animation: float 6.5s ease-in-out -4s infinite; }
+.m-ico { width: 36px; height: 36px; border-radius: 11px; background: rgba(255, 255, 255, .12); display: grid; place-items: center; font-size: 17px; flex: none; }
+.m-tx div { flex: 1; min-width: 0; }
+.m-tx b { display: block; font-size: 13px; color: #fff; }
+.m-tx small { color: #9ab8a6; font-size: 11px; }
+.m-tx em { font-style: normal; font-weight: 800; font-size: 13px; color: #ffb09a; white-space: nowrap; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+.brand-points { list-style: none; margin: auto 0 0; padding: 0; display: grid; gap: 11px; font-size: 13.5px; color: #c4d9cb; }
+.brand-points li { display: flex; align-items: center; gap: 10px; }
+.brand-points .i { color: var(--lime); width: 17px; height: 17px; }
+
+/* ---- form (kanan) ---- */
+.auth-main { display: grid; place-items: center; padding: 40px 24px; }
+.auth-card { width: 100%; max-width: 410px; }
+.auth-head { margin-bottom: 28px; }
+.auth-head h1 { font: 800 31px/1.1 var(--font-display); letter-spacing: -1px; }
+.auth-head p { color: var(--text-2); margin-top: 8px; font-size: 14.5px; }
+
+.form-alert {
+  background: var(--danger-soft); color: var(--danger); border: 1px solid color-mix(in srgb, var(--danger) 30%, transparent);
+  border-radius: 12px; padding: 12px 14px; font-size: 13px; font-weight: 600; margin-bottom: 18px;
+}
+
+.divider { display: flex; align-items: center; gap: 14px; margin: 20px 0 16px; color: var(--muted); font-size: 12px; font-weight: 600; }
+.divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--line-2); }
+.hint { margin-top: 10px; text-align: center; font-size: 12px; color: var(--muted); }
+.switch { margin-top: 24px; text-align: center; color: var(--text-2); font-size: 13.5px; }
+.switch a { font-weight: 700; text-decoration: none; }
+.switch a:hover { text-decoration: underline; }
+
+/* meter kekuatan kata sandi */
+.meter { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin-top: 2px; }
+.meter i { height: 5px; border-radius: 6px; background: var(--line-2); transition: background .2s; }
+.meter[data-level="1"] i:nth-child(-n+1) { background: var(--danger); }
+.meter[data-level="2"] i:nth-child(-n+2) { background: #e6a23c; }
+.meter[data-level="3"] i:nth-child(-n+3) { background: #8fc24a; }
+.meter[data-level="4"] i { background: var(--brand); }
+.rules { list-style: none; padding: 0; margin: 2px 0 0; display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; color: var(--muted); }
+.rules li { position: relative; padding-left: 16px; transition: color .15s; }
+.rules li::before { content: ""; position: absolute; left: 0; top: 5px; width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid var(--line-2); transition: .15s; }
+.rules li.ok { color: var(--brand-ink); }
+.rules li.ok::before { background: var(--brand); border-color: var(--brand); }
+
+@media (max-width: 900px) {
+  .auth-shell { grid-template-columns: 1fr; }
+  .auth-brand { padding: 26px 24px 30px; gap: 18px; }
+  .brand-copy h2 { font-size: 30px; }
+  .brand-copy p, .mock, .brand-points { display: none; }
+  .auth-main { align-items: start; padding: 28px 20px 48px; }
+}
