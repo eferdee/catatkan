@@ -4,5 +4,9 @@ declare(strict_types=1);
 require __DIR__ . '/includes/bootstrap.php';
 
 start_session();
-header('Location: ' . (current_user_id() !== null ? 'dashboard.php' : 'login.php'));
-exit;
+if (current_user_id() !== null) {
+    header('Location: dashboard.php');
+    exit;
+}
+// Pengunjung yang belum masuk melihat landing page.
+require __DIR__ . '/landing.php';

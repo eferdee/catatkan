@@ -59,6 +59,9 @@
 /* ---- form (kanan) ---- */
 .auth-main { display: grid; place-items: center; padding: 40px 24px; }
 .auth-card { width: 100%; max-width: 410px; }
+.back-link { display: inline-flex; align-items: center; gap: 6px; margin: 0 0 22px -8px; padding: 7px 12px 7px 8px; border-radius: 10px; color: var(--text-2); text-decoration: none; font-weight: 600; font-size: 13.5px; transition: background .15s, color .15s; }
+.back-link:hover { background: var(--surface-2); color: var(--text); }
+.back-link .i { width: 16px; height: 16px; }
 .auth-head { margin-bottom: 28px; }
 .auth-head h1 { font: 800 31px/1.1 var(--font-display); letter-spacing: -1px; }
 .auth-head p { color: var(--text-2); margin-top: 8px; font-size: 14.5px; }

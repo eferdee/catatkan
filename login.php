@@ -34,6 +34,7 @@ $demo = (bool) cfg('demo_enabled');
 
   <main class="auth-main">
     <div class="auth-card">
+      <a class="back-link" href="index.php"><svg class="i"><use href="#i-chev-left"/></svg>Kembali ke beranda</a>
       <header class="auth-head">
         <h1>Selamat datang kembali</h1>
         <p>Masuk untuk melihat ringkasan keuanganmu.</p>

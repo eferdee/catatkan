@@ -33,6 +33,7 @@ $csrf = csrf_token();
 
   <main class="auth-main">
     <div class="auth-card">
+      <a class="back-link" href="index.php"><svg class="i"><use href="#i-chev-left"/></svg>Kembali ke beranda</a>
       <header class="auth-head">
         <h1>Buat akun baru</h1>
         <p>Mulai kelola keuanganmu dalam hitungan detik.</p>
