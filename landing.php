@@ -21,13 +21,11 @@ $demo = (bool) cfg('demo_enabled');
 <meta name="csrf" content="<?= e($csrf) ?>">
 <meta name="description" content="CatatKan: catat pemasukan dan pengeluaran, atur anggaran bulanan, dan capai target tabunganmu dalam satu dasbor yang tenang.">
 <title>CatatKan — Uangmu, lebih terkendali</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="assets/js/theme.js"></script>
+<script src="assets/js/theme.js?v=<?= filemtime(__DIR__ . '/assets/js/theme.js') ?>"></script>
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/landing.css">
+<link rel="stylesheet" href="assets/css/fonts.css?v=<?= filemtime(__DIR__ . '/assets/css/fonts.css') ?>">
+<link rel="stylesheet" href="assets/css/base.css?v=<?= filemtime(__DIR__ . '/assets/css/base.css') ?>">
+<link rel="stylesheet" href="assets/css/landing.css?v=<?= filemtime(__DIR__ . '/assets/css/landing.css') ?>">
 </head>
 <body>
 <?php include __DIR__ . '/includes/icons.php'; ?>
@@ -159,6 +157,6 @@ $demo = (bool) cfg('demo_enabled');
   <div><a href="login.php">Masuk</a><a href="register.php">Daftar</a></div>
 </footer>
 
-<script src="assets/js/landing.js"></script>
+<script src="assets/js/landing.js?v=<?= filemtime(__DIR__ . '/assets/js/landing.js') ?>"></script>
 </body>
 </html>

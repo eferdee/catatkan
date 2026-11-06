@@ -1,0 +1,11 @@
+/* Font self-hosted agar tampil sama di semua perangkat (tidak bergantung Google Fonts). */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal; font-weight: 200 800; font-display: swap;
+  src: url('../fonts/bricolage-grotesque-latin-wght-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal; font-weight: 200 800; font-display: swap;
+  src: url('../fonts/plus-jakarta-sans-latin-wght-normal.woff2') format('woff2');
+}

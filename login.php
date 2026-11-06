@@ -20,12 +20,10 @@ $demo = (bool) cfg('demo_enabled');
 <meta name="theme-color" content="#f2f5ee">
 <meta name="csrf" content="<?= e($csrf) ?>">
 <title>Masuk — CatatKan</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="assets/js/theme.js"></script>
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/auth.css">
+<script src="assets/js/theme.js?v=<?= filemtime(__DIR__ . '/assets/js/theme.js') ?>"></script>
+<link rel="stylesheet" href="assets/css/fonts.css?v=<?= filemtime(__DIR__ . '/assets/css/fonts.css') ?>">
+<link rel="stylesheet" href="assets/css/base.css?v=<?= filemtime(__DIR__ . '/assets/css/base.css') ?>">
+<link rel="stylesheet" href="assets/css/auth.css?v=<?= filemtime(__DIR__ . '/assets/css/auth.css') ?>">
 </head>
 <body class="auth-body">
 <?php include __DIR__ . '/includes/icons.php'; ?>
@@ -75,6 +73,6 @@ $demo = (bool) cfg('demo_enabled');
     </div>
   </main>
 </div>
-<script src="assets/js/auth.js"></script>
+<script src="assets/js/auth.js?v=<?= filemtime(__DIR__ . '/assets/js/auth.js') ?>"></script>
 </body>
 </html>
